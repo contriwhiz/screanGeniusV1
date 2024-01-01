@@ -1,0 +1,600 @@
+body{ cursor: auto;margin: 0px;padding: 0px; background: #000;}
+div#video-download-wrapper 
+{
+    float: left;
+    width: 100%;
+    color: #FFF;
+}
+div#video-download-top {
+    float: left;
+    width: 92%;
+    padding: 10px 4%;
+    z-index: 11;
+    position: relative;
+}
+div#video-download-logo {
+    float: left;
+}
+div#video-download-nav {
+    float: right;
+}
+#video-download-logo img {
+    width: 30px;
+    float: left;
+}
+#video-download-logo span {
+    float: left;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+.video-download-nav-item {
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    position: relative;
+}
+.video-download-nav-item img {
+    width: 20px;
+    float: left;
+}
+.video-download-nav-item span {
+    float: left;
+    padding: 2px 10px 0px 5px;
+    cursor: pointer;
+}
+div#video-download-content {
+    float: left;
+    width: 92%;
+    padding: 10px 4%;
+    background: #FFF;
+}
+#video-download-content-left-inner, #video-download-content-left-inner video
+{
+    float: left;
+    width: 100%;
+}
+div#video-download-content-left {
+    float: left;
+    width: 80%;
+    padding: 0.5%;
+    margin: 0 9.5%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+}
+div#video-download-content-right {
+    float: left;
+    width: 100%;
+    padding: 0 0% 0 0%;
+}
+.video-download-content-row {
+    background: #000;
+    padding: 2%;
+    border-radius: 10px;
+    float: left;
+    width: 45.5%;
+}
+.video-download-save {
+    margin-left: 0.5%;
+    margin-top: 1%;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.video-download-details {
+    margin-right: 0.5%;
+    margin-top: 1%;
+}
+.video-row-inner {
+    float: left;
+    width: 100%;
+}
+.video-row-inner > label {
+    font-size: 15px;
+    float: left;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.video-row-col {
+    margin-top: 5px;
+    float: left;
+    width: 33%;
+}
+span.col-item-label {
+    float: left;
+    padding-right: 10px;
+    font-size: 13px;
+}
+span.col-item-val {
+    float: left;
+    font-size: 13px;
+}
+.video-row-col.video-duration {
+    width: 30%;
+}
+.video-row-col.video-date {
+    width: 40%;
+}
+.video-row-col.video-size {
+    width: 30%;
+}
+.download-screen-button, .download-screen-link {
+    background: #FFFFFF;
+    border: none;
+    color: #000000;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.video-download-signin .video-row-inner {
+    text-align: center;
+}
+.video-download-signin .video-row-inner button, .video-download-signin .video-row-inner a {
+    padding: 10px 30%;
+    margin: 15px 0px 5px 0px;
+}
+.download-screen-link {
+    display: inline-block;
+    text-decoration: none;
+}
+.video-row-col-left {
+    float: left;
+    width: 50%;
+    text-align: left;
+    font-size: 13px;
+}
+.video-row-col-right {
+    float: right;
+    width: 50%;
+    text-align: left;
+}
+.video-row-col-right span.col-item-label, .video-row-col-right span.col-item-val {
+    float: none;
+}
+.video-download .video-row-col {
+    padding: 7px 2%;
+    width: 96%;
+}
+.video-download .download-screen-button, .video-download-save .download-screen-button, .download-screen-link
+{
+    padding: 10px 20px;
+}
+#video-download-format
+{
+    display: none;
+}
+.video-row-col-left img {
+    width: 25px;
+    float: left;
+}
+.video-row-col-left span {
+    float: left;
+    padding: 2px 10px;
+}
+.video-row-col-left.ve-youtube span {
+    padding: 0px 10px;
+}
+.video-download-save .video-row-col {
+    padding: 0px 2%;
+    width: 46%;
+    margin: 0px;
+}
+.video-download-content-row.video-download-details {
+    padding: 2.53% 2%;
+}
+.includes-button .video-row-col-left {
+    margin-top: 8px;
+}
+.send-link-share:hover, .send-email-share:hover, .send-feedback-share:hover
+{
+    background: #000000;
+    border: 1px solid #ffffff;
+    color: #FFF;
+}
+.annotation-row .save-annotation {
+    margin-left: 5px;
+}
+.annotation-row .save-annotation button {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    color: #000000;
+    padding: 6px 7px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.send-link-share, .send-email-share, .send-feedback-share {
+    background: #000000;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 6px 7px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+#share-feedback-form input, #share-feedback-form textarea {
+    padding: 10px 3%;
+    float: left;
+    width: 94%;
+    border: 1px solid #C7C7C8;
+}
+.feedback-share-popup {
+    height: 270px;
+}
+#share-feedback-form textarea {
+    height: 100px;
+}
+.close-link-share, .close-email-share, .close-feedback-share {
+    background: transparent;
+    border: 1px solid #000000;
+    color: #000000;
+    padding: 6px 7px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+p.message-counter {
+    margin: 0px;
+    text-align: left;
+    font-size: 10px;
+    color: red;
+    height: 0px;
+    position: relative;
+    top: -5px;
+}
+.close-link-share:hover, .close-email-share:hover, .close-feedback-share:hover
+{
+    background: #000000;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+}
+div#email-share-popup-wrapper, div#link-share-popup-wrapper, #feedback-share-popup-wrapper, #success-popup-wrapper, #failure-popup-wrapper {
+    width: 100%;
+    background: #00000085;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 12;
+}
+.email-share-popup, .feedback-share-popup, .success-popup, .failure-popup { 
+    width: 350px;
+    height: 300px;
+    margin: 0px auto;
+    position: relative;
+    top: 15%;
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    color: #000000;
+}
+.feedback-share-popup { height: 490px; }
+.email-share-popup { height: 500px; }
+.success-popup, .failure-popup{ height: 330px; }
+div#link-share-popup-wrapper .email-share-popup
+{
+    width: 100%;
+    height: 460px;
+    max-width: 600px;
+}
+#link-share-popup-wrapper .email-share-form input {
+    width: 72%;
+    float: left;
+}
+#link-share-popup-wrapper .email-share-form button{ margin-left: 5px;text-transform: capitalize;border-radius: 5px;padding: 7px 15px;font-size: 11px;cursor: pointer;border-radius: 10px;}
+#link-share-popup-wrapper .email-share-form {margin-top: 15px;}
+.email-share-heading, .feedback-share-heading, .success-heading, .failure-heading {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.email-share-heading span, .feedback-share-heading span, .success-heading span, .failure-heading span {
+    font-size: 18px;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+span.success-description,span.failure-description {
+    font-size: 14px;
+}
+.email-share-heading img, .feedback-share-heading img {
+    width: 75%;
+}
+.attachment-thumb
+{
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: left;
+    height: 30px;
+    width: 100%;
+    margin-top: 17px;
+}
+.attachment-thumb p {
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 7px;
+}
+.success-heading img, .failure-heading img{ width: 50%; }
+.email-share-form {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-style: normal;
+    font-family: FuturaBkBook;
+    letter-spacing: 1px;
+    line-height: 20px !important;
+    text-align: center;
+}
+.email-share-form .loader-icon {
+    width: 30px;
+}
+.email-share-submit .loader-icon, .feedback-share-submit .loader-icon {
+    width: 30px;
+    float: left;
+    display: none;
+}
+.email-share-form input {
+    float: left;
+    width: 98%;
+    margin-bottom: 10px;
+    border: 1px solid #C7C7C8;
+    padding: 5px;
+    border-radius: 3px;
+    color: #000;
+}
+.email-share-form input:focus-visible
+{
+    border: 1px solid #C7C7C8;
+}
+.email-share-form textarea {
+    border: 1px solid #C7C7C8;
+    border-radius: 3px;
+    width: 98%;
+    resize: none;
+    padding: 5px;
+    color: #000;
+}
+.email-share-form textarea:focus-visible
+{
+    border: 1px solid #C7C7C8;
+}
+.email-share-submit, .feedback-share-submit 
+{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.email-share-submit button, .feedback-share-submit button
+{ 
+    text-transform: capitalize;
+}
+/* button.close-link-share, button.close-email-share, button.close-feedback-share
+{
+    border: 1px solid #FFF;
+    color: #FFF;
+}
+button.close-link-share:hover, button.close-email-share:hover, button.close-feedback-share:hover
+{
+    color: #FFF;
+}
+button.send-link-share:hover, button.send-email-share:hover, button.send-feedback-share:hover
+{
+    border: 1px solid #FFF;
+    color: #FFF;
+} */
+.email-share-form span {
+    float: left;
+    width: 98%;
+    margin-bottom: 5px;
+    padding: 0px 5px 5px 5px;
+    border-radius: 3px;
+    text-align: left;
+}
+#video-download-format {
+    padding: 5px;
+    border: none;
+}
+img.copyright-logo-name {
+    width: 75px !important;
+    padding: 8px;
+}
+.video-download-nav-item a {
+    color: #FFF;
+}
+
+/* signin popup */
+div#quix-signin-wrapper {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 11;
+    display: block;
+    background: transparent;
+    display: none;
+}
+div#quix-signin-overlay {
+    position: absolute;
+    opacity: 0.4;
+    background: #000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+#quix-signin-inner h3 {
+    float: left;
+    width: 100%;
+    font-size: 16px;
+}
+.quix-signin-row {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.quix-signin-row img {
+    width: 25px;
+    float: left;
+}
+.quix-signin-row span {
+    font-size: 14px;
+    float: left;
+    padding: 4px 0 0 10px;
+    width: calc(100% - 35px);
+}
+.quix-signin-button, .quix-signin-button-social {
+    float: left;
+    width: 100%;
+}
+div#quix-signin-inner {
+    width: 300px;
+    background: #FFF;
+    padding: 15px;
+    z-index: 12;
+    position: relative;
+    top: 0px;
+    border-radius: 25px;
+    display: block;
+    margin: 100px auto;
+    height: 315px;
+}
+.quix-signin-button span, .quix-signin-button-social span {
+    background: #000;
+    color: #FFF;
+    border-radius: 25px;
+    width: 80%;
+    display: inline-block;
+    margin: 10px 10%;
+    text-align: center;
+    padding: 12px 0px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.quix-signin-close img {
+    width: 30px;
+    cursor: pointer;
+}
+.quix-signin-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.loggedin-item
+{
+    display: none;
+}
+.quix-logo-main-title {
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 5px;
+    float: left;
+}
+#quix-popup-loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.7;
+    display: none;
+    z-index: 100;
+}
+.quix-popup-loader-inner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.quix-popup-loader-inner img {
+    width: 65px;
+    height: 65px;
+    margin-top: 20%;
+    position: fixed;
+}
+.quix-popup-overlay
+{
+    position: absolute;
+    opacity: 0.4;
+    background: #000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.quix-logo-main-title {
+    font-size: 16px;
+    color: #FFF;
+    padding: 0px 5px;
+    float: left;
+    color: #000;
+    font-weight: 600;
+}
+#share-feedback-form .loader-icon {
+    width: 25px;
+    float: left;
+    position: absolute;
+    left: 50px;
+    bottom: 24px;
+  }
+
+.share-popup-outer, .download-popup-outer
+{
+    position: absolute;
+    background: #000;
+    top: 20px;
+    left: 0px;
+    border-radius: 10px;
+    padding: 5px;
+    display: none;
+    width: 200px;
+}
+.share-popup-outer, .download-popup-outer
+{
+    width: 160px;
+}
+.download-popup-outer {
+    width: 100px;
+}
+#annotations-popup-outer
+{
+    top: 53px;
+    width: 98%;
+    padding: 0.5% 1%;
+}
+div#screenshot-wrapper-bottom 
+{
+    float: left;
+    width: auto;
+    overflow: auto;
+    background: #DEDEDE;
+    text-align: center;
+    width: 100%;
+    min-height: 500px;
+}
+.share-popup-inner
+{
+    float: left;
+    width: 100%;
+}
+.download-col {
+    width: 100%;
+}
+.shape-col, .annotation-col, .share-col, .download-col {
+    float: left;
+}
+.shape-row, .annotation-row, .share-row, .download-row {
+    float: left;
+    padding: 5px 10px;
+    width: 100%;
+}
+.shape-row img
+{
+    width: 30px;
+    float: left;
+}
+.share-row span, .download-row span {
+    float: left;
+    color: #FFF;
+    text-decoration: underline;
+}

@@ -1,0 +1,75 @@
+{
+  "manifest_version": 3,
+  "name": "ScreenGenius - Screenshot & Video capture tool",
+  "version": "1.1",
+  "description": "Screenshot & Video capture tool",
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+   {
+     "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+     "match_origin_as_fallback": true,
+     "css": ["css/content.css"],
+     "js": ["js/jquery.js","js/jquery-ui.min.js","js/helper.js","js/libs/captureScreenshot.js","js/libs/recordScreen.js","js/content.js"],
+     "all_frames": false
+   }
+ ],
+  "commands": {
+    "run-foo": {
+      
+      "suggested_key": {
+        "default": "Alt+Shift+Q",
+        "mac": "Alt+Shift+Q"
+      },
+      "description": "open popup"
+    },
+    "_execute_action": {
+      "suggested_key": {
+        "windows": "Alt+Shift+X",
+        "mac": "Alt+Shift+X",
+        "chromeos": "Alt+Shift+X",
+        "linux": "Alt+Shift+X"
+      }
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://apis.google.com/;"
+  },
+  "oauth2": {
+    "client_id": "83540021534-2c1fb50fpt3utv4hul1f5nokpc2d2mg7.apps.googleusercontent.com", 
+    "scopes": [
+      "openid", "email", "profile"
+    ]
+  },
+  "permissions": ["storage", "tabs", "activeTab", "scripting","unlimitedStorage","identity", "identity.email"],
+  "host_permissions": ["<all_urls>"],
+  "author": "Quixy",
+  "short_name": "Snapprr",
+  "web_accessible_resources": [{
+    "resources": ["/fonts/*","/images/*"],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+  }],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Snapprr - Screenshot & Video capture tool",
+    "default_icon": {
+    "16": "/images/logo-16.png",
+    "32": "/images/logo-32.png",
+    "48": "/images/logo-48.png",
+    "128": "/images/logo-128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/logo-16.png",
+    "32": "/images/logo-32.png",
+    "48": "/images/logo-48.png",
+    "128": "/images/logo-128.png"
+  }
+}

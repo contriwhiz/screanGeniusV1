@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Snapprr - Screenshot & Video capture tool</title>
+	<link rel="stylesheet" type="text/css" href="/css/fullscreen.css">
+</head>
+<body>
+	<div id="download-overlay">
+        <div id="download-overlay-inner" class="download-overlay-inner full-screen-view downloads-screen">
+            <div id="screenshot-wrapper">
+            	<div id="screenshot-wrapper-top" class="full-screen-share">
+                    <div id="screenshot-wrapper-top-right">
+                    </div>
+                    <div id="screenshot-wrapper-top-mid">
+                    </div>
+                    <div id="screenshot-wrapper-top-left">
+                        <div id="page-back">
+                            <img src="images/arrow-back.png">
+                            <div>Back</div>
+                        </div>
+                        <span>Snapprr - Screenshot & Video capture tool</span>
+                    </div>
+                </div>
+                <div id="screenshot-wrapper-middle">
+                	<div id="screenshot-area-left">
+                		<img id="screenshot-area-left-img" src=""/>
+                	</div>
+                	<div id="screenshot-download-right">
+                		<div id="screenshot-download-right-inner">
+                			<div id="download-options">
+                                <div id="download-title">
+                                    <span>Download</span>
+                                </div>
+                				<div class="download-col" id="download-as-png">
+                					<span>PNG</span>
+                				</div>
+                				<div class="download-col" id="download-as-jpeg">
+                					<span>JPEG</span>
+                				</div>
+                				<div class="download-col" id="download-as-pdf">
+                					<span>PDF</span>
+                				</div>
+                				<!-- <div class="download-col" id="download-as-print">
+                					<span>PRINT</span>
+                				</div> -->
+                			</div>
+                			<div id="download-options">
+                                <div id="download-title">
+                                    <span>Share</span>
+                                </div>
+                                <div class="share-col" id="share-via-link">
+                                    <span>Generate Link</span>
+                                </div>
+                				<div class="share-col" id="share-via-email">
+                					<span>Send through Email</span>
+                				</div>
+                				<div class="share-col" id="share-via-copy">
+                					<span>Copy to Clipboard</span>
+                				</div>
+                            </div>
+                            <div id="download-options">
+                                <div id="download-title">
+                                    <span>Feedback</span>
+                                </div>
+                                <div class="email-share-form">
+                                    <input type="text" name="to-email" placeholder="Enter Your Email">
+                                    <textarea id="email-message" placeholder="Enter Your Feedback" maxlength="300" name="email-message"></textarea>
+                                    <p class="message-counter"></p>
+                                    <p class="message-report"></p>
+                                    <button>Send</button>
+                                </div>
+                			</div>
+                		</div>
+                	</div>
+                </div>
+            	<div id="screenshot-wrapper-bottom-copyright">
+                    <a target="_blank" href="https://quixy.com/"><img src="/images/quixy-logo.png"></a>                      
+                    <span class="copyright-reserved">© 2022 Quixy, All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jspdf.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,1358 @@
+#download-overlay-inner *, #floatable-recorder-tool-container *,  #floatable-recorder-camera-container *, .screen-cap-content *, #video-outer *{box-sizing: border-box !important; -webkit-box-sizing: border-box !important;} 
+#download-overlay-inner img{display: inline-block !important;vertical-align: unset !important;}
+/* #download-overlay-inner a, #download-overlay-inner body, #download-overlay-inner button, #download-overlay-inner code, #download-overlay-inner div, #download-overlay-inner input, #download-overlay-inner kbd, #download-overlay-inner label, #download-overlay-inner pre, #download-overlay-inner samp, #download-overlay-inner select, #download-overlay-inner span
+{
+    font-family: FuturaBkBook !important;
+}
+#download-overlay-inner textarea
+{
+    font-family: FuturaBkBook;
+}
+#floatable-recorder-tool span
+{
+    font-family: FuturaBkBook;
+} */
+#download-overlay {width: 100%;background: rgba(82, 79, 79, 0.7) !important;position: fixed !important;top: 0 !important;right: 0;height: 100%;z-index: 999 !important;} 
+#download-overlay-inner {position: relative;min-width: 800px;width: 75%;float: right;height: 100%;background: #FFFFFF !important;font-size: 14px !important;font-weight: 500 !important;font-style: normal !important;line-height: 20px;}
+div#screenshot-wrapper, #screenshot-wrapper-bottom 
+{
+    float: left;
+    width: 100%;
+}
+div#screenshot-wrapper-bottom-wrap-inner {
+    position: relative;
+    padding: 15px;
+}
+#screenshot-wrapper-top-left img {cursor: pointer;width: 24px;float: left;}
+#download-overlay-inner img{display: inline-block;vertical-align: unset;}
+input#imgUpload {
+    width: 25px;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+#screenshot-wrapper-top {
+    float: left;
+    width: 100%;
+    background: #000000;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px 1%;
+    z-index: 20;
+    position: relative;
+}
+.sideBar-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    margin: 0;
+}
+.sideBar-li {
+    cursor: pointer;
+    float: left;
+    padding: 7px 7px 7px 7px;
+    border-radius: 100%;
+    margin: 0px 5px;
+    position: relative;
+}
+.sideBar-li:hover,.sideBar-li.active
+{
+    background: #2E2C2C;
+}
+.sideBar-li-inner {
+    float: left;
+}
+.sideBar-icon {
+    padding: 0;
+    height: 18px;
+    float: left;
+}
+.screenshot-title, .sideBar-ul, .sideBar-seperator, .screenshot-zoom, .screenshot-maximize, .screenshot-close {
+    float: left;
+    width: auto;
+    margin: 0px 10px;
+}
+.sideBar-seperator, .screenshot-zoom, .screenshot-maximize, .screenshot-close, .sideBar-ul.share-ul, .sideBar-ul.manage-ul {
+    float: right;
+}
+.sideBar-seperator {
+    color: #FFF;
+    font-size: 25px;
+    margin-top: -4px;
+}
+.screenshot-title input {
+    padding: 8px 15px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+}
+.zoom-quix-out, .zoom-quix-in {
+    background: #000000;
+    border-radius: 100%;
+    float: left;
+    cursor: pointer;
+}
+.screenshot-zoom img {
+    width: 25px;
+    float: left;
+}
+span.zoom-quix-status {
+    font-size: 12px;
+    float: left;
+    color: #000;
+    margin-top: 3px;
+    padding: 3px 5px 4px 5px !important;
+    line-height: 12px;
+}
+.screenshot-zoom {
+    background: #FFF;
+    border-radius: 30px;
+    padding: 3px;
+}
+.screenshot-maximize img, .screenshot-close img {
+    width: 25px;
+}
+.screenshot-maximize, .screenshot-close {
+    margin-top: 5px;
+    cursor: pointer;
+}
+div#screenshot-wrapper-bottom-copyright {
+    width: 100%;
+    float: left;
+    background: #EDEDED;
+    margin-left: 0px;
+    padding: 1% 2%;
+    text-align: center;
+}
+.copyright-logo {
+    float: left;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+.copyright-updates {
+    display: inline-block;
+}
+.copyright-logo-powered 
+{
+    float: right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+.copyright-logo span {
+    float: left;
+    margin: 5px 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.copyright-logo img {
+    width: 30px;
+    float: left;
+}
+.copyright-updates {
+    background: #000000;
+    padding: 10px 20px;
+    color: #FFF;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.copyright-logo-powered span {
+    font-size: 16px;
+    float: left;
+    font-weight: 500;
+    padding-right: 10px;
+}
+.copyright-logo-powered img {
+    height: 23px;
+}
+.shapes-popup-outer, #annotations-popup-outer, .share-popup-outer, .download-popup-outer 
+{
+    position: absolute;
+    background: #000;
+    top: 26px;
+    left: 0px;
+    border-radius: 10px;
+    padding: 5px;
+    display: none;
+    width: 210px;
+}
+div#screenshot-wrapper-bottom {
+    float: left;
+    width: auto;
+    overflow: auto;
+    background: #DEDEDE;
+    text-align: center;
+}
+.shapes-popup-inner,.annotations-popup-inner, .share-popup-inner, .download-popup-inner {
+    float: left;
+    width: 100%;
+}
+.download-col {
+    width: 100%;
+}
+.shape-col, .annotation-col, .share-col, .download-col {
+    float: left;
+}
+.shape-row, .annotation-row, .share-row, .download-row {
+    float: left;
+    padding: 5px 10px;
+}
+.shape-row img
+{
+    width: 30px;
+    float: left;
+}
+.share-row span, .download-row span {
+    float: left;
+    color: #FFF;
+    text-decoration: underline;
+}
+.annotation-row input[type="checkbox"], .annotation-row input[type="radio"], .annotation-row input[type="text"] {
+    display: none;
+}
+#annotations-popup-outer .annotation-row {
+    padding: 5px 5px;
+}
+.annotation-row select {
+    max-width: 100px;
+    padding: 7px 5px;
+    border: none;
+    border-radius: 5px;
+}
+.annotation-row img {
+    width: 20px;
+    float: left;
+}
+.annotation-col .input-radio-custom {
+    float: left;
+    padding: 5px;
+    cursor: pointer;
+}
+.color-picker-wrapper {
+    float: left;
+    margin: 5px 5px;
+}
+.color-picker-wrapper span {
+    width: 20px;
+    display: block;
+    height: 20px;
+    background: #FFF;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px #FFF;
+    cursor: pointer;
+}
+.annotation-row label {
+    float: left;
+    color: #FFF;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.annotation-row.annotation-vertical input, .annotation-row.annotation-horizontal input, .annotation-row.annotation-width input, .annotation-row.annotation-height input
+{
+    display: block;    
+    max-width: 50px;
+    padding: 5px;
+}
+.annotation-row .cancel-annotation, .annotation-row .save-annotation {
+    float: left;cursor: pointer;
+}
+button.close-link-share, button.close-email-share, button.close-feedback-share {
+    background: transparent !important;
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+    padding: 6px 7px !important;
+    border-radius: 7px !important;
+    cursor: pointer !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 14px !important;
+}
+button.close-link-share:hover, button.close-email-share:hover, button.close-feedback-share:hover
+{
+    background: #000000 !important;
+    border: 1px solid #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+.annotation-row .save-annotation button:hover, .send-link-share:hover, .send-email-share:hover, .send-feedback-share:hover
+{
+    background: #FFF !important;
+    border: 1px solid #000 !important;
+    color: #000 !important;
+}
+.annotation-row .save-annotation {
+    margin-left: 5px;
+}
+.annotation-row .save-annotation button, .send-link-share, .send-email-share, .send-feedback-share {
+    background: #000000 !important;
+    border: 1px solid #000000 !important;
+    color: #FFF !important;
+    padding: 6px 7px !important;
+    border-radius: 7px !important;
+    cursor: pointer !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 14px !important;
+}
+#share-feedback-form input, #share-feedback-form textarea {
+    padding: 10px 3%;
+    float: left;
+    width: 94%;
+    font-size: 14px;
+    line-height: 16px;
+    height: auto;
+}
+#share-feedback-form textarea {
+    height: 100px;
+}
+li.sideBar-li.quix-shapes {
+    position: relative;
+}
+#annotations-popup-outer .sideBar-seperator {
+    float: left;
+    margin-top: 0px;
+}
+.annotation-outline .annotation-col div {
+    float: left;
+}
+.annotation-outline .annotation-col .fields-col2 {
+    margin: 1px 5px 1px 10px;
+}
+.annotation-row .highlight-type, .annotation-row .highlight-size, .annotation-row .color-picker-wrapper {
+    float: left;
+    margin: 0px 2px;
+}
+.annotation-row .color-picker-wrapper {
+    margin: 5px 0px;
+}
+#annotations-popup-outer .annotation-row{ display: none; }
+#annotations-popup-outer .annotation-row.annotation-vertical, #annotations-popup-outer .annotation-row.annotation-horizontal, #annotations-popup-outer .annotation-row.annotation-width, #annotations-popup-outer .annotation-row.annotation-height, #annotations-popup-outer .annotation-row.annotation-buttons
+{
+    display: block;
+}
+#annotations-popup-outer.text .annotation-row.annotation-font-family, #annotations-popup-outer.text .annotation-row.annotation-fonts, #annotations-popup-outer.text .annotation-row.annotation-fonts-styles, #annotations-popup-outer.text .annotation-row.annotation-fonts-colors, #annotations-popup-outer.text .annotation-row.annotation-fill-transparency, #annotations-popup-outer.text .annotation-row.annotation-outline
+{
+    display: block;
+}
+#annotations-popup-outer.highlight .annotation-row.annotation-highlight
+{
+    display: block;
+}
+#annotations-popup-outer.annotation .annotation-row.annotation-outline
+{
+    display: block;
+}
+#annotations-popup-outer.blur .annotation-row.annotation-blur
+{
+    display: block;
+}
+#annotations-popup-outer.shapes .annotation-row.annotation-outline
+{
+    display: block;
+}
+#annotations-popup-outer.highlight .annotation-row.annotation-vertical, #annotations-popup-outer.highlight .annotation-row.annotation-horizontal, #annotations-popup-outer.highlight .annotation-row.annotation-width, #annotations-popup-outer.highlight .annotation-row.annotation-height
+{
+    display: none;
+}
+div#editor-outer-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*background: #00000073;
+    height: 100%;
+    width: 100%;*/
+}
+.editor-outer-image-overlay
+{
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.editor-outer-image-overlay img {
+    width: 100%;
+    height: 100%;
+}
+.editor-outer-overlay-textarea {
+    background: transparent;
+    /* border: 0px; */
+    resize: none;
+    color: rgba(0, 0, 0);
+}
+.editor-outer-overlay-textarea::-webkit-input-placeholder {
+  color: rgba(0, 0, 0);
+}
+
+.editor-outer-overlay-textarea:-moz-placeholder { /* Firefox 18- */
+  color: rgba(0, 0, 0);  
+}
+
+.editor-outer-overlay-textarea::-moz-placeholder {  /* Firefox 19+ */
+  color: rgba(0, 0, 0);  
+}
+
+.editor-outer-overlay-textarea:-ms-input-placeholder {
+  color: rgba(0, 0, 0);  
+}
+
+.editor-outer-overlay-textarea::placeholder {
+  color: rgba(0, 0, 0);  
+}
+.editor-outer-overlay-textarea {
+    height: 100%;
+    background-color: transparent;
+    width: 100%;
+    resize: none;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    line-height: 15px;
+    margin: 0px;
+    font-family: Arial;
+    text-align: left;
+}
+.editor-outer-overlay {
+    background: transparent;
+    border: 1px solid #525050;
+    padding: 5px 5px;
+}
+.editor-outer-overlay:focus-visible {
+    outline: none !important;
+}
+.editor-outer-overlay-textarea:focus-visible {
+    outline: none !important;
+}
+textarea.editor-outer-overlay-textarea {
+    border: none !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+span.input-radio-custom {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.input-radio-custom input[type="radio"], .input-radio-custom input[type="checkbox"] {
+    position: absolute;
+    width: 20px;
+    margin: 0;
+    opacity: 0;
+    z-index: 19;
+    cursor: pointer;
+    display: block;
+}
+.input-radio-custom img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    z-index: 18;
+    border-radius: 100%;
+    padding: 2px 2px;
+}
+.highlight-pallette {
+    float: left;
+    margin: 5px;
+}
+.highlight-pallette span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+.annotation-highlight .color-picker-wrapper {
+    margin-left: 10px;
+}
+.annotation-row input[type="number"], .annotation-row input[type="text"]
+{
+    padding: 7px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+}
+.ui-resizable-s {
+    cursor: s-resize;
+    height: 7px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+}
+.ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+}
+.ui-resizable-e {
+    cursor: e-resize;
+    width: 7px;
+    right: -5px;
+    top: 0;
+    height: 100%;
+}
+div#email-share-popup-wrapper, div#link-share-popup-wrapper, #feedback-share-popup-wrapper, #success-popup-wrapper, #failure-popup-wrapper {
+    width: 100%;
+    background: #00000085;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+}
+.email-share-popup, .feedback-share-popup, .success-popup, .failure-popup { 
+    width: 350px;
+    height: 300px;
+    margin: 0px auto;
+    position: relative;
+    top: 15%;
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    color: #000000;
+}
+.feedback-share-popup { height: 490px; }
+.feedback-share-heading img {
+    width: 75%;
+}
+.feedback-share-heading span, .success-heading span, .failure-heading span {
+    font-size: 18px;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    font-weight: 400;
+}
+div#link-share-popup-wrapper .email-share-popup
+{
+    width: 100%;
+    height: 100px;
+    max-width: 600px;
+}
+#link-share-popup-wrapper .email-share-form input {
+    width: 72%;
+    float: left;
+}
+#link-share-popup-wrapper .email-share-form button{ margin-left: 5px;text-transform: capitalize;border-radius: 5px;padding: 7px 15px;font-size: 11px;cursor: pointer;border-radius: 10px;}
+#link-share-popup-wrapper .email-share-form {margin-top: 15px;}
+.success-popup, .failure-popup{ height: 330px; }
+.email-share-heading, .feedback-share-heading, .success-heading, .failure-heading {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.email-share-form {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    /* font-family: FuturaBkBook; */
+    letter-spacing: 1px;
+    line-height: 20px !important;
+}
+.email-share-form input {
+    float: left;
+    width: 98%;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 3px;
+    color: #000;
+}
+.email-share-form input:focus-visible
+{
+    border: 1px solid #000;
+}
+.email-share-form textarea {
+    border: 1px solid #000;
+    border-radius: 3px;
+    width: 98%;
+    resize: none;
+    padding: 5px;
+    color: #000;
+}
+.email-share-form textarea:focus-visible
+{
+    border: 1px solid #000;
+}
+.email-share-submit, .feedback-share-submit 
+{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.email-share-submit button, .feedback-share-submit button
+{ 
+    text-transform: capitalize;
+}
+button.close-link-share:hover, button.close-email-share:hover, button.close-feedback-share:hover
+{
+    color: #FFF;
+}
+.email-share-form span {
+    float: left;
+    width: 98%;
+    margin-bottom: 5px;
+    padding: 0px 5px 5px 5px;
+    border-radius: 3px;
+    text-align: left;
+}
+span.label-reset, span.copy-clipboard {
+    cursor: pointer;
+    margin-left: 20px;
+}
+span.success-description,span.failure-description {
+    font-size: 14px;
+}
+.success-heading img, .failure-heading img{ width: 50%; }
+.sp-container
+{
+    background: #000 !important;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.sp-container input.sp-input {
+    background: #FFF;
+    border: 1px solid #FFF;
+}
+.sp-container button.sp-choose {
+    background: #FFF;
+    border: 1px solid #FFF;
+}
+.sp-container .sp-clear.sp-clear-display {
+    border: 1px solid #FFF;
+}
+.sp-container a.sp-cancel
+{
+    color: #FFF !important;
+}
+img.loader-icon 
+{
+    width: 30px;
+    height: 30px;
+    float: left;
+    position: relative;
+    left: 50px;
+    display: none;
+}
+p.message-report {
+    text-align: center;
+    font-weight: bold;
+    margin: 0px 0px 5px 0px;
+    height: 0px;
+}
+.email-share-form img.loader-icon {
+    float: none;
+    left: 0;
+}
+.email-share-form {
+    text-align: center;
+}
+p.message-counter {
+    margin: 0px;
+    text-align: left;
+    font-size: 10px;
+    color: red;
+    height: 0px;
+    position: relative;
+    top: -5px;
+    width: 100%;
+    float: left;
+}
+.attachment-thumb {
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: left;
+    height: 40px;
+    width: 100%;
+    margin-top: 17px;
+}
+.attachment-thumb p {
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+.share-popup-outer
+{
+    width: 185px;
+}
+.download-popup-outer {
+    width: 100px;
+}
+#annotations-popup-outer
+{
+    top: 56px;
+    width: 100%;
+    padding: 0.5% 1%;
+}
+li.sideBar-li.quix-shapes, li.sideBar-li.icon-shareable, li.sideBar-li.label-download {
+    border-radius: 20px;
+}
+.shape-row, .share-row, .download-row {
+    padding: 5px 5px;
+    margin: 0px 5px;
+    border-radius: 10px;
+}
+.shape-row:hover, .share-row:hover, .download-row:hover {
+    background: #2E2C2C;
+}
+.screenshot-title input {
+    background: #FFF;
+    font-weight: 700;
+}
+.share-row, .download-row {
+    float: left;
+    width: 100%;
+    padding: 5px 5%;
+    margin: 0;
+}
+.share-row span {
+    float: left;
+    padding: 2px 10px;
+    text-decoration: none;
+}
+.download-row span
+{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+.share-row img, .download-row img {
+    float: left;
+    width: 25px;
+}
+.sideBar-seperator{margin-top: 5px;}
+.annotation-buttons{display: none;}
+.sideBar-icon.disabled {
+    opacity: 0.5;
+}
+/* half window UI adjustments */
+@media screen and (max-width: 1450px)
+{
+    #annotations-popup-outer
+    {
+        top: 56px;
+    }
+    .sideBar-li {
+        margin: 2px 3px;
+        padding: 5px 5px;
+    }
+    .screenshot-title, .sideBar-ul, .screenshot-zoom, .screenshot-maximize, .screenshot-close {
+        margin: 0px 5px;
+    }
+    .screenshot-maximize, .screenshot-close {
+        margin-top: 5px;
+    }
+}
+@media screen and (max-width: 1200px)
+{
+    .shapes-popup-outer{width: 170px;}
+    #screenshot-wrapper-top,#annotations-popup-outer,div#screenshot-wrapper-bottom-copyright{width: 100%;}
+    #screenshot-wrapper-bottom-copyright{width: 100%;width: 100%;padding: 10px;}
+    .copyright-logo{padding-left: 0px;}
+    .copyright-updates{padding: 5px 5px;margin-top: 5px;}
+    .copyright-logo-powered {padding-right: 0px;}
+    span.copyright-updates-inner {font-size: 14px;}
+    .screenshot-title{margin: 0px;}
+    .screenshot-title, .sideBar-ul, .screenshot-zoom, .screenshot-maximize, .screenshot-close {margin: 0px 5px;}
+    .sideBar-li {margin: 0px 2px;padding: 5px;}
+    .screenshot-title input {
+        padding: 5px 5px;
+        width: 75px;
+    }
+    span.zoom-quix-status {
+        margin-top: 0px;
+    }
+    .screenshot-zoom img
+    {
+        width: 20px;
+    }
+    .screenshot-maximize img, .screenshot-close img
+    {
+        width: 22px;
+    }
+    .screenshot-zoom, .sideBar-seperator,.screenshot-maximize,.screenshot-close{margin-top: 3px;}
+    .shape-row img {
+        width: 20px;
+    }
+    .shapes-popup-outer
+    {
+        width: 170px;
+    }
+    .share-popup-outer
+    {
+        width: 195px;
+    }
+    .download-popup-outer
+    {
+        width: 100px;
+    }
+    .shapes-popup-outer, .share-popup-outer, .download-popup-outer
+    {
+        top: 26px;
+    }
+    div#annotations-popup-outer
+    {
+        top: 48px;
+    }
+    .annotation-row select {
+        padding: 5px 3px;
+        max-width: 75px;
+    }
+    .annotation-row input[type="number"], .annotation-row input[type="text"] {
+        padding: 5px 3px;
+        max-width: 30px;
+    }
+    .annotation-row .cancel-annotation button, .close-link-share, .close-email-share {
+        padding: 4px 5px;
+    }
+    .annotation-row .save-annotation button, .send-link-share, .send-email-share {
+        padding: 4px 5px;
+    }
+}
+
+/* Recorder tool */
+
+div#floatable-recorder-tool {display: none; float: left;width: 250px;position: fixed;bottom: 20px;left: 20px;float: left;pointer-events: all;} 
+/*#floatable-recorder-tool-inner .stop-rec 
+{
+    background: red !important;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    padding: 0; 
+}*/
+#floatable-recorder-tool-inner span.timer-rec {
+    padding: 8px 10px;
+    font-size: 16px;
+    line-height: 18px;
+}
+/*#floatable-recorder-tool-inner span.stop-rec {
+    margin: 8px 5px ;
+    height: 25px !important;
+    width: 25px !important;
+}*/
+#floatable-recorder-tool-inner span.drag-icon {
+    float: left !important;
+}
+#camera-recording-preview{
+    float: left;
+    width: 325px;
+    position: relative;
+    height: 100%;
+    visibility: visible;
+    background: #000;
+}
+div#recorder-tool-controls {
+    float: left;
+    width: 100%;
+    background: #000000;
+    position: relative;
+    margin-top: 5px;
+    border-radius: 25px;
+    padding: 4px;
+}
+.screen-cap-content div#recorder-wait-overlay {
+    position: absolute;
+}
+.screen-cap-content .recorder-wait-overlay-inner p {
+    font-size: 26px;
+}
+div#recorder-tool-controls-inner {
+    float: left;
+    width: 100%;
+}
+div#floatable-recorder-tool-inner {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+#recorder-tool-controls span img {
+    float: left;
+    width: 24px;
+}
+#recorder-tool-controls-inner span.drag-icon {
+    background: #242424;
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin-left: 0px !important;
+}
+#recorder-tool-controls-inner span.minimize-rec, #recorder-tool-controls-inner span.maximize-rec {
+    margin: 4px 10px 4px 0px!important;
+}
+.timer-rec
+{
+    color: #FFFFFF;
+}
+.arrow-effects, .anno-effects, .arrow-effects {
+    position: relative;
+    float: right;
+}
+div#recorder-wait-overlay {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #3a3a3ab0;
+    display: table;
+}
+.recorder-wait-overlay-inner {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+.recorder-wait-overlay-inner p {
+    color: #FFF;
+    font-size: 30px;
+}
+#selected-screen-capture-inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    cursor: crosshair;
+    background-color: rgba(0, 0, 0, 0.3);
+    font: normal normal normal 12px/1 Helvetica, arial, sans-serif;
+    box-sizing: content-box !important;
+}
+#selected-screen-capture-inner > div {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: auto;
+}
+
+.screen-cap-top {
+    top: 0;
+    left: 0;
+}
+.screen-cap-right 
+{
+    top: 0;
+    right: 0;
+}
+.screen-cap-bottom
+{
+    right: 0;
+    bottom: 0;
+}
+.screen-cap-left
+{
+    bottom: 0;
+    left: 0;
+}
+.screen-cap-content {
+    cursor: move;
+    outline: 1.5px dashed #d5d5d5 !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.play-rec, .mic-rec, .cam-rec, .maximize-rec
+{
+    display: none;
+}
+#recorder-tool-controls span {
+    float: right;
+    margin: 3px 0px;
+    padding: 5px;
+    border-radius: 25px;
+}
+#recorder-tool-controls span:hover
+{
+    background: rgb(36, 36, 36);
+}
+.drag-icon img 
+{
+    width: 12px !important;
+}
+span.drag-icon {
+    margin: 0px !important;
+}
+.cam-rec img, .cam-rec-disable img, .mic-rec img, .mic-rec-disable img, .play-rec img, .pause-rec img, .close-rec img, .minimize-rec img, .maximize-rec img
+{
+    cursor: pointer;
+}
+#recorder-tool-custom-tab
+{
+    display: none;
+    cursor: pointer;
+    float: right;
+    padding: 3px 4px;
+    text-decoration: underline;
+}
+.effect-child-options {
+    display: none;
+    float: left;
+    position: absolute;
+    width: 150px;
+    top: 20px;
+    background: #000000;
+    padding: 5px;
+    left: -10px;
+    z-index: 19;
+}
+.effect-child-options span {
+    float: left;
+    cursor: pointer;
+}
+.maximize-rec img, .minimize-rec img {
+    width: 11px !important;
+}
+.arrow-effect-choose, .anno-choose, .remove-anno-choose {
+    position: relative;
+}
+.arrow-effects span, .anno-effects span, .remove-anno-effects span
+{
+    cursor: pointer;
+}
+.arrow-effect-choose:hover .effect-child-options, .anno-choose:hover .effect-child-options, .remove-anno-choose:hover .effect-child-options
+{
+    display: block;
+}
+.shape-highlight-mouse, .shape-highlight-click
+{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    z-index: 1001;
+}
+.shape-highlight-click
+{
+    display: none;
+}
+.shape-highlight-mouse
+{
+    background: #ffff0094;
+}
+.shape-highlight-click
+{
+    background: transparent;
+    border: 2px solid red;
+}
+.arrow-spotlight-outer,.arrow-spotlight-cursor
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+}
+.arrow-spotlight-cursor
+{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;  
+    box-shadow: 0px 0px 4px 10px rgba(0,0,0,0.5) inset, 0px 0px 0px 5000px rgba(0,0,0,0.5) 
+}
+canvas#draw-recording-anno {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    z-index: 1001;
+    background: transparent;
+    pointer-events: none;
+}
+.anno-effects .effect-child-options span {
+    float: left !important;
+}
+.anno-effects .effect-child-options {
+    width: 190px;
+}
+.effect-child-options {
+    background: #000;
+    top: -35px;
+    left: -10px;
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+.effect-child-options span.tool-color {
+    border: 1px solid #FFF;
+    margin: 14px 5px !important;
+}
+.effect-child-options span.tool-color {
+    border: 1px solid #FFF;
+    margin: 10px 2px !important;
+    width: 7px;
+    height: 7px;
+}
+span.tool-color.tool-color-red {
+    background: #ff0000;
+}
+span.tool-color.tool-color-blue {
+    background: #0000ff;
+}
+span.tool-color.tool-color-green {
+    background: #008000;
+}
+div#floatable-recorder-tool-container, div#floatable-recorder-camera-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+}
+.arrow-effects .effect-child-options {
+    width: 150px;
+}
+.close-toobar {
+    position: absolute;
+    right: -8px;
+    bottom: 30px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 4px #000;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1004;
+}
+.close-toobar img {
+    width: 100%;
+    float: left;
+}
+#recorder-tool-controls span {
+    cursor: pointer;
+    color: #FFF;
+}
+/* #recorder-tool-controls span.close-rec, #recorder-tool-controls span.stop-rec {
+    background: #FFF;
+    color: #000000;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 5px 10px;
+    margin: 7px 2px;
+} */
+.effect-child-options span.tool-color {
+    width: 20px !important;
+    height: 20px !important;
+}
+.shape-highlight-mouse, .shape-highlight-click, .arrow-spotlight-overlay
+{
+    pointer-events: none;
+}
+.arrow-spotlight-outer {
+    pointer-events: none;
+}
+div#selected-screen-capture {
+    float: left;
+    width: 100%;
+    z-index: 9998;
+    position: absolute;
+}
+div#camera-tool-controls {
+    position: absolute;
+    bottom: 56px;
+    width: 100%;
+    height: unset;
+    left: 0px;
+    display: none;
+}
+div#camera-tool-controls-inner {
+    float: left;
+    width: 100%;
+}
+#camera-tool-selector span {
+    background: #000000;
+    height: 37px;
+    width: 37px;
+    float: left;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#camera-tool-selector img {
+    float: left;
+    padding: 6px;
+    width: 35px;
+}
+div#camera-tool-selector
+{
+    position: relative;
+}
+div#camera-tool-options {
+    position: absolute;
+    width: 170px;
+    background: #000;
+    border-radius: 25px;
+    border: 1px solid #FFFFFF;
+    left: 80px;
+    top: 40px;
+    display: none;
+}
+#camera-tool-options span {
+    float: left;
+    cursor: pointer;
+}
+#camera-tool-options img {
+    width: 35px;
+    padding: 5px;
+    float: left;
+}
+#camera-tool-options .sideBar-seperator {
+    float: left;
+    margin-top: 2px;
+}
+#video-outer.camera-view-1, #video-outer.camera-view-2, #video-outer.camera-view-3 {
+    border-radius: 100%;
+}
+#video-outer.camera-view-4
+{
+    border-radius: 10px;
+}
+#video-outer {
+    float: left;
+    overflow: hidden;
+    box-shadow: 0 0 5px #DEDEDE;
+    height: 0px;
+    z-index: 999;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    cursor: pointer;
+    pointer-events: all;
+}
+div#video-inner {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+#video-outer.camera-view-1{
+    width:75px !important;
+    height: 75px !important;
+}
+#video-outer.camera-view-2 {
+    width: 125px !important;
+    height: 125px !important;
+}
+#video-outer.camera-view-3 {
+    width: 200px !important;
+    height: 200px !important;
+}
+#video-outer.camera-view-4 {
+    width: 325px !important;
+    height: 206px !important;
+}
+#video-outer.camera-view-1 video
+{
+    width: 100px;
+    left: 0px;
+}
+#video-outer.camera-view-2 video
+{
+    width: 170px;
+    left: -23px;
+}
+#video-outer.camera-view-3 video
+{
+    width: 268px;
+    left: -34px;
+}
+#video-outer.camera-view-4 video
+{
+    width: 325px;
+    left: 0px;
+}
+#camera-tool-options img:hover
+{
+    background-color: #242424;
+    border-radius: 100%;
+}
+.stop-rec img {
+    background: red;
+    border-radius: 100%;
+}
+div#floatable-recorder-tool-inner {
+    position: relative;
+}
+span#close-captureScreen {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2147483648;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+#close-captureScreen img {
+    width: 100%;
+}
+#quix-screen-capture-outer img {
+    float: left;
+    width: 20px;
+    background: #000;
+    border-radius: 100%;
+    padding: 6px;
+    cursor: pointer;
+    margin: 0px 2px;
+    box-sizing: unset;
+}
+#quix-screen-capture-outer
+{
+    position: absolute;
+    z-index: 2147483649;
+}
+.screen-cap-content div#camera-tool-selector img {
+    width: 35px;
+}
+.screen-cap-content #camera-tool-options img {
+    width: 35px;
+}
+
+.camera-view-3 div#camera-tool-options
+{
+    width: 115px;
+    left: 43px;
+}
+.camera-view-3 #camera-tool-options img {
+    width: 24px;
+    padding: 5px 2px;
+}
+.camera-view-3 .sideBar-seperator {
+    margin: 0px 5px 0px 5px !important;
+}
+
+.camera-view-2 div#camera-tool-options
+{
+    width: 100px;
+    left: 12px;
+}
+.camera-view-2 #camera-tool-options img {
+    width: 22px;
+    padding: 5px 1px;
+}
+.camera-view-2 .sideBar-seperator {
+    margin: 0px 1px 0px 1px !important;
+}
+div#recorder-tool-custom-tab {
+    padding: 0px;
+}
+#recorder-tool-controls #recorder-tool-custom-tab span {
+    padding: 0px 5px;
+}
+span#dimensions-message {
+    float: left;
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    font-weight: 600;
+    color: #fffefe;
+    background: #4b4848;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}

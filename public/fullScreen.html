@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ScreenGenius - Screenshot & Video capture tool</title>
+    <link rel="stylesheet" type="text/css" href="/css/spectrum.css">
+    <link rel="stylesheet" type="text/css" href="/css/fullscreen.css">
+</head>
+<body>
+	<div id="download-overlay" class="fulscreen-mode">
+        <div id="download-overlay-inner" class="download-overlay-inner full-screen-view">
+            <div id="screenshot-wrapper" >
+                <div id="screenshot-wrapper-top">
+                    <div class="screenshot-title"><input type="text" name=""></div>
+                    <div class="screenshot-annotations">
+                        <ul class="sideBar-ul annotate-ul" >
+                            <li class="sideBar-li quix-text" title="Text"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-text2-icon.png"/></div></li>
+                            <li class="sideBar-li quix-shapes" title="Shapes"><div class="sideBar-li-inner"><img class="sideBar-icon shape-parent-icon" src="/images/quix-shapes-icon.png"/></div>
+                                <div class="shapes-popup-outer">
+                                    <div class="shapes-popup-inner">
+                                        <div class="shape-row shape-reactangle"><div class="shape-col"><img src="/images/quix-reactanle2-icon.png"></div></div>
+                                        <div class="shape-row shape-oval"><div class="shape-col"><img src="/images/quix-oval-icon.png"></div></div>
+                                        <div class="shape-row shape-line"><div class="shape-col"><img src="/images/quix-shape-line-icon.png"></div></div>
+                                        <div class="shape-row shape-arrow"><div class="shape-col"><img src="/images/quix-shape-arrow-icon.png"></div></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="sideBar-li quix-highlight" title="Highlight"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-markertool-icon.png"/></div></li>
+                            <li class="sideBar-li quix-blur" title="Blur"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-blur-icon.png"/></div></li>
+                            <li class="sideBar-li quix-crop" title="Crop"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-croptool-icon.png"/></div></li>
+                            <li class="sideBar-li quix-upload" title="Image Upload"><input type="file" id="imgUpload" name="imgUpload"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-uploadool-icon.png"/></div></li>
+                        </ul>
+                    </div>
+                    <div class="screenshot-actions">
+                        <div class="done-editing-outer">
+                            <div id="done-editing"><span>DONE</span></div>
+                        </div>
+                        <div class="screenshot-zoom">
+                            <span class="zoom-quix-out"><img src="/images/quix-minus-icon.png" title='Shift + "-"'></span>
+                            <span class="zoom-quix-status">100%</span>
+                            <span class="zoom-quix-in"><img src="/images/quix-plus-icon.png" title='Shift + "+"'></span>
+                        </div>
+                        <div class="sideBar-seperator">|</div>
+                        <!--<ul class="sideBar-ul share-ul" >
+                            <li class="sideBar-li copy-clipboard" title="Copy to Clipboard"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-copy2-icon.png"/></li>
+                            <li class="sideBar-li icon-shareable" title="Share">
+                                <div class="sideBar-li-inner">
+                                    <img class="sideBar-icon" src="/images/quix-share2-icon.png"/>
+                                    <img class="sideBar-icon" src="/images/quix-down3-icon.png"/>
+                                </div>
+                                <div class="share-popup-outer">
+                                    <div class="share-popup-inner">
+                                        <div class="share-row share-link label-share"><div class="download-col"><img class="download-col-img" src="/images/quix-link-green-icon.png"/><span>Share Link</span></div></div>
+                                        <div class="share-row share-email label-email"><div class="download-col"><img class="download-col-img" src="/images/quix-email-icon.png"/><span>Share via Email</span></div></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="sideBar-li label-download" title="Download">
+                                <div class="sideBar-li-inner">
+                                    <img class="sideBar-icon" src="/images/quix-download2-icon.png"/>
+                                    <img class="sideBar-icon" src="/images/quix-down4-icon.png"/>
+                                </div>
+                                <div class="download-popup-outer">
+                                    <div class="download-popup-inner">
+                                        <div class="download-row download-png"><div class="download-col"><span>PNG</span></div></div>
+                                        <div class="download-row download-jpeg"><div class="download-col"><span>JPG</span></div></div>
+                                        <div class="download-row download-pdf"><div class="download-col"><span>PDF</span></div></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>-->
+                        <ul class="sideBar-ul manage-ul" >
+                            <li class="sideBar-li icon-undo" title="Undo"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-undo-icon.png"/></li>
+                            <li class="sideBar-li icon-redo" title="Redo"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-redo-icon.png"/></div></li>
+                            <li class="sideBar-li label-reset" title="Reset Changes"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-reset-icon.png"/></div></li>
+                            <li class="sideBar-li quix-copy" id="share-via-copy" title="Copy to Clipboard"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-copy-icon.png"/></div></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="annotations-popup-outer">
+                    <div class="annotations-popup-inner">
+                        <div class="annotation-row annotation-font-family" title="Text Family">
+                            <div class="annotation-col">
+                                <select id="font-family">
+                                    <option value="Arial">Arial</option>
+                                    <option value="serif">serif</option>
+                                    <option value="sans-serif">Sans-serif</option>
+                                    <option value="Verdana">Verdana</option>
+                                    <option value="Times New Roman">Times New Roman</option>
+                                    <option value="Courier New">Courier New</option>   
+                                </select>
+                            </div>
+                        </div>
+                        <div class="annotation-row annotation-fonts" title="Text Size">
+                            <div class="annotation-col">
+                                <select id="font-size">
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option selected value="14">14</option>
+                                    <option value="16">16</option>
+                                    <option value="22">22</option>
+                                    <option value="26">26</option>
+                                    <option value="32">32</option>
+                                    <option value="40">40</option>
+                                    <option value="48">48</option>
+                                    <option value="60">60</option>
+                                    <option value="72">72</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="annotation-row annotation-fonts-styles">
+                            <div class="annotation-col">
+                                <span class="input-radio-custom input-radio-custom-style" title="Text Style">
+                                    <input type="checkbox" name="font_style[]" value="Italic">
+                                    <img src="/images/quix-italic-icon.png"/>
+                                </span>
+                                <span class="input-radio-custom input-radio-custom-style" title="Text Weight">
+                                    <input type="checkbox" name="font_style[]" value="Bold">
+                                    <img src="/images/quix-bold-icon.png"/>
+                                </span>
+                                <span class="input-radio-custom input-radio-custom-style" title="Text Decoration">
+                                    <input type="checkbox" name="font_style[]" value="Underline">
+                                    <img src="/images/quix-underline-icon.png"/>
+                                </span>
+                                <span class="input-radio-custom input-radio-custom-align active" title="Text Alignment Left">
+                                    <input checked type="radio" name="text_alignment" value="start">
+                                    <img src="/images/quix-alignleft-icon.png"/>
+                                </span>
+                                <span class="input-radio-custom input-radio-custom-align" title="Text Alignment Center">
+                                    <input type="radio" name="text_alignment" value="center">
+                                    <img src="/images/quix-aligncenter-icon.png"/>
+                                </span>
+                                <span class="input-radio-custom input-radio-custom-align" title="Text Alignment Right">
+                                    <input type="radio" name="text_alignment" value="end">
+                                    <img src="/images/quix-alignright-icon.png"/>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="annotation-row annotation-fonts-colors"  title="Text Color">
+                            <div class="annotation-col">
+                                <div class="fields-col5" title="Text Color">
+                                    <input id="font-color" value="#FF0000" type="text" readonly>
+                                    <div class="color-picker-wrapper"><span id="text-color-picker"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="annotation-row annotation-fill-transparency" title="Text Box Transparency">
+                            <div class="annotation-col">
+                                <div class="fields-col5" title="Fill/Transparency">
+                                    <input id="font-fill" value="#FFFF00" type="text" readonly>
+                                    <div class="color-picker-wrapper"><span id="fill-color-picker"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="annotation-row annotation-outline">
+                            <div class="annotation-col">
+                                <div class="fields-col5" title="Outline Color">
+                                    <input id="font-outline" value="#525FB0" type="text" readonly>
+                                    <div class="color-picker-wrapper"><span id="outline-color-picker" style="background-color: #525FB0;"></span></div>
+                                </div>
+                                <div class="fields-col2" title="Outline Size">
+                                    <input id="font-ouline-size" type="number" min="1" max="5" value="3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="annotation-row annotation-blur" title="Blur Intensity">
+                            <div class="annotation-col">
+                                <div class="fields-col5">
+                                    <input id="blur-strength" type="number" min="1" max="5" value="3">
+                                </div>
+                             </div>
+                        </div>
+                        <div class="annotation-row annotation-highlight" >
+                            <div class="annotation-col">
+                                <div class="highlight-type" title="Highlight Type">
+                                    <select id="highlightType">
+                                        <option value="Brush">Brush</option>
+                                        <option value="Block">Block</option>
+                                    </select>
+                                </div>
+                                <div class="highlight-size" title="Highlight Size">
+                                    <select id="highlight-size">
+                                        <option value="small">Small</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="large">Large</option>
+                                    </select>
+                                </div>
+                                <input id="highlight-bg-input" value="#ff0" type="text" readonly>
+                                <div class="color-picker-wrapper" title="Highlight Color"><span id="highlight-bg-color-picker"></span></div>
+                                <div class="highlight-pallette" title="Highlight Color">
+                                    <span data-color="#ff0" style="background-color: #ff0;"></span>
+                                    <span data-color="#30FF00" style="background-color: #30FF00;"></span>
+                                    <span data-color="#FF004A" style="background-color: #FF004A;"></span>
+                                    <span data-color="#1600FF" style="background-color: #1600FF;"></span>
+                                    <span data-color="#000000" style="background-color: #000000;"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="annotation-row annotation-horizontal" title="X-axis"><div class="annotation-col"><label>X</label><input id="x-val" value="0" type="number"></div></div>
+                        <div class="annotation-row annotation-vertical" title="Y-axis"><div class="annotation-col"><label>Y</label><input id="y-val" value="0" type="number"></div></div>
+                        <div class="annotation-row annotation-width" title="Width"><div class="annotation-col"><label>W</label><input id="width-val" value="0" type="number"></div></div>
+                        <div class="annotation-row annotation-height" title="Height"><div class="annotation-col"><label>H</label><input id="height-val" value="0" type="number"></div></div>
+                        <div class="annotation-row annotation-buttons">
+                            <div class="cancel-annotation">
+                                 <button>cancel</button>
+                            </div>
+                            <div class="save-annotation">
+                                 <button class="text-button">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="screenshot-wrapper-bottom-copyright" class="screenshot-wrapper-bottom-copyright">
+                    <div class="copyright-logo"><img class="copyright-logo-icon" src="/images/logo-48.png"><span class="quix-logo-main-title">ScreenGenius</span></div>
+                    <div class="copyright-updates"><span class="copyright-updates-inner">Checkout ScreenGenius version 3.1.3 & enjoy the updated features!</span></div>
+                    <div class="copyright-logo-powered">
+                        <span class="copyright-reserved">powered by</span>
+                        <a target="_blank" href="https://quixy.com/"><img src="/images/quixy-logo-footer.png"></a>  
+                    </div>                    
+                </div>
+                <div id="screenshot-wrapper-bottom">
+                    <div id="screenshot-wrapper-bottom-wrap">
+                        <div id="screenshot-wrapper-bottom-wrap-inner">
+                            <canvas id="captured-screen"></canvas>
+                            <div id="upload-custom-screenshot-outer"><span class="upload-custom-screenshot-area">Drop or Choose your Image</span><input type="file" id="upload-custom-screenshot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="download-overlay" class="download-mode">
+        <div id="download-overlay-inner" class="download-overlay-inner full-screen-view downloads-screen">
+            <div id="screenshot-wrapper" >
+                <div id="screenshot-wrapper-top">
+                    <div id="page-back" title="Go back to edit screen">
+                        <img src="images/quix-arrow-left-icon.png">
+                    </div>
+                    <div class="screenshot-title"><input type="text" name=""></div>
+                    <ul class="sideBar-ul annotate-ul" >
+                        <li class="sideBar-li quix-feedback" id="share-feedback" title="Share Feedback"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-feedback-icon.png"/></div></li>
+                        <div class="sideBar-seperator">|</div>
+                        <li class="sideBar-li quix-copy" id="share-via-copy" title="Copy to Clipboard"><div class="sideBar-li-inner"><img class="sideBar-icon" src="/images/quix-copy-icon.png"/></div></li>
+                        <li class="sideBar-li icon-shareable" title="Share">
+                            <div class="sideBar-li-inner">
+                                <img class="sideBar-icon" src="/images/quix-share-icon.png"/>
+                            </div>
+                            <div class="share-popup-outer">
+                                <div class="share-popup-inner">
+                                    <div class="share-row share-link label-share"><div class="download-col"><img class="download-col-img" src="/images/quix-link-green-icon.png"/><span>Share Link</span></div></div>
+                                    <div class="share-row share-email label-email"><div class="download-col"><img class="download-col-img" src="/images/quix-email-icon.png"/><span>Share via Email</span></div></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="sideBar-li label-download" title="Download">
+                            <div class="sideBar-li-inner">
+                                <img class="sideBar-icon" src="/images/quix-download-icon.png"/>
+                            </div>
+                            <div class="download-popup-outer">
+                                <div class="download-popup-inner">
+                                    <div class="download-row download-png"><div class="download-col"><span>PNG</span></div></div>
+                                    <div class="download-row download-jpeg"><div class="download-col"><span>JPG</span></div></div>
+                                    <div class="download-row download-pdf"><div class="download-col"><span>PDF</span></div></div>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="sideBar-seperator">|</div>
+                        <li class="sideBar-li quix-upload">
+                            <div class="sideBar-li-inner user-dashboard" title="Go to Dashboard">
+                                <img class="sideBar-icon" src="images/quix-dashboard-icon.png" alt=""/><span>Dashboard</span>
+                            </div>
+                            <div class="sideBar-li-inner user-upload"  title="Upload to Cloud"><img class="sideBar-icon" src="/images/quix-save-cloud-white.png"/><span>Upload</span></div>
+                            <div class="sideBar-li-inner loggedin-item user-logOut"  title="Log Out"><img class="sideBar-icon" src="/images/quix-user-icon.png"/><span>Log Out</span></div>
+                            <div class="sideBar-li-inner loggedOut-item user-logIn-social"  title="Log In"><img class="sideBar-icon" src="/images/quix-user-icon.png"/><span>Log In</span></div>
+                            <div class="sideBar-li-inner loggedOut-item user-logIn"  title="Log In with Gmail"><img class="sideBar-icon" src="/images/google-icon.png"/><span>Log In with Gmail</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="screenshot-wrapper-bottom-copyright" class="screenshot-wrapper-bottom-copyright">
+                    <div class="copyright-logo"><img class="copyright-logo-icon" src="/images/logo-48.png"><span class="quix-logo-main-title">ScreenGenius</span></div>
+                    <div class="copyright-updates"><span class="copyright-updates-inner">Checkout ScreenGenius version 3.0.2 & enjoy the updated features!</span></div>
+                    <div class="copyright-logo-powered">
+                        <span class="copyright-reserved">powered by</span>
+                        <a target="_blank" href="https://quixy.com/"><img src="/images/quixy-logo-footer.png"></a>  
+                    </div>                    
+                </div>
+                <div id="screenshot-wrapper-middle">
+                    <div id="screenshot-area-left">
+                        <img id="screenshot-area-left-img" src=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="quix-signin-wrapper" class="quix-signin-wrapper">
+        <div id="quix-signin-overlay" class="quix-signin-overlay"></div>
+        <div id="quix-signin-inner">
+          <h3>Sign In to more..</h3>
+          <div class="quix-signin-row"><img alt="" src="images/quix-signin-folder.png"/><span>Fast Access to screenshots / videos</span></div>
+          <div class="quix-signin-row"><img alt="" src="images/quix-signin-gallery.png"/><span>Easily share Images / videos via link with anyone</span></div>
+          <div class="quix-signin-row"><img alt="" src="images/quix-signin-link.png"/><span>Using URL save all the screenshots together</span></div>
+          <div class="quix-signin-button-social"><span>Sign In</span></div>
+          <div class="quix-signin-button"><span>Sign In with Gmail</span></div>
+          <div class="quix-signin-close"><img alt="" src="images/quix-signin-close-circle.png"/></div>
+        </div>
+    </div>
+    <div id="quix-popup-loader">
+        <div class="quix-popup-loader-inner">
+          <div id="quix-popup-overlay" class="quix-popup-overlay"></div>
+          <img src="images/light-loader.gif" alt=""/>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jspdf.min.js"></script>
+    <script type="text/javascript" src="js/spectrum.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
